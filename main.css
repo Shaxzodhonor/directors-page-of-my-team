@@ -87,6 +87,10 @@ input {
     position: relative;
     display: inline-block;
 }
+.directors__plus-img:hover {
+    
+    cursor: pointer;
+}
 
 .directors__card-wrap:not(:last-child) .directors__card
 input:checked ~ .directors__plus-wrap .directors__text-wrap {
@@ -100,8 +104,6 @@ input:checked ~ .label .directors__plus-img {
 .label .directors__plus-img:hover  .circle {
     fill:#79C8C7;
     transition: all 0.5s ease-in;
-    
-    cursor: pointer;
 }
 .directors__card-wrap:not(:last-child) .directors__card
 input:checked ~ .label .circle {
