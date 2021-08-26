@@ -1,0 +1,134 @@
+body {
+    background-color: #004047;
+}
+.directors {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+.directors__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 64px;
+}
+.directors__card {
+    position: relative;
+    background-color:  #012F34;
+    max-width: 360px;
+    margin: 26px auto;
+    padding: 1px;
+}
+.directors__card-wrap .directors__card::before {
+    background-size: 96px 96px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    content: "";
+}
+
+
+.directors__card-wrap:nth-child(1) .directors__card::before {
+    background-image: url(./img/director-one.png);
+}
+.directors__card-wrap:nth-child(2) .directors__card::before {
+    background-image: url(./img/director-two.png);
+}
+.directors__card-wrap:nth-child(3) .directors__card::before {
+    background-image: url(./img/director-three.png);
+}
+.directors__card-wrap:nth-child(4) .directors__card::before {
+    background-image: url(./img/director-four.png);
+}
+.directors__card-wrap:nth-child(5) .directors__card::before {
+    background-image: url(./img/director-five.png);
+}
+.directors__card-wrap:nth-child(6) .directors__card::before {
+    background-image: url(./img/director-sex.png);
+}
+.directors__card-wrap:last-child {
+    display: none;
+}
+.directors__card-title  {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #79C8C7;
+}
+.directors__card-subtitle  {
+    margin: 0;
+    margin-bottom: 56px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+input {
+    display: none;
+}
+.label {
+     position: absolute;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    z-index: 1;
+}
+.directors__plus-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.directors__card-wrap:not(:last-child) .directors__card
+input:checked ~ .directors__plus-wrap .directors__text-wrap {
+    transform: scaleX(1);
+}
+.directors__card-wrap:not(:last-child) .directors__card
+input:checked ~ .label .directors__plus-img {
+    transform: rotate(45deg);
+}
+.directors__card-wrap:not(:last-child) .directors__card
+.label .directors__plus-img:hover  .circle {
+    fill:#79C8C7;
+    transition: all 0.5s ease-in;
+}
+.directors__card-wrap:not(:last-child) .directors__card
+input:checked ~ .label .circle {
+    fill: #c6c5dd;
+}
+
+.directors__text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 356px;
+    height: 279px;
+    background-color:  #012F34;
+     position: absolute;
+     left: -1px;
+     bottom: -7px;
+     transform: scaleX(0);
+     transition: all 0.4s ease-in;
+}
+
+.directors__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 240px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
